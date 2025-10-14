@@ -1,0 +1,95 @@
+.cta2-section {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 0 64px 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.cta2-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(24, 24, 40, 0.4);
+  z-index: 1;
+}
+.cta2-content {
+  border-radius: 2rem;
+  padding: 8rem 2.2rem 8rem 2.2rem;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.cta2-title {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #bfcaff;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.01em;
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  line-height: 1.15;
+}
+
+.cta2-subtitle {
+  font-size: 1.18rem;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.cta2-desc {
+  color: #ffffff;
+  font-size: 1.08rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.cta2-button {
+  background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+  color: #181926;
+  font-weight: 700;
+  font-size: 1.13rem;
+  padding: 0.95rem 2.5rem;
+  border: none;
+  border-radius: 1.7rem;
+  cursor: pointer;
+  box-shadow: 0 2px 12px 0 rgba(123,140,255,0.13);
+  transition: background 0.22s, color 0.22s, transform 0.18s, box-shadow 0.22s;
+  outline: none;
+  margin-top: 0.2rem;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  position: relative;
+  overflow: hidden;
+}
+.cta2-button:hover {
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  color: #23243a;
+  transform: translateY(-2px) scale(1.045);
+  box-shadow: 0 8px 32px 0 rgba(80, 120, 255, 0.18), 0 2px 8px 0 rgba(0,0,0,0.10);
+}
+
+@media (max-width: 700px) {
+  .cta2-content {
+    padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+    max-width: 98vw;
+  }
+  .cta2-title {
+    font-size: 1.3rem;
+  }
+  .cta2-desc {
+    font-size: 0.98rem;
+  }
+} 

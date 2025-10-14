@@ -1,0 +1,189 @@
+.core-features-section {
+  width: 100%;
+  background: #0a0c18;
+  padding-top: 1.0px;
+  padding-bottom: 80px;
+}
+
+.features-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.features-content {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+  
+}
+
+.what-is-inai-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 265px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.features-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.features-description {
+  font-size: 1.15rem;
+  color: #bdbdbd;
+  margin-bottom: 0;
+}
+
+.why-features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #181828;
+  padding: 0px 40px;
+  border-radius: 3rem;
+}
+
+.why-feature-card {
+  /* background: linear-gradient(90deg, #e0e0e0, #a0a0e0); */
+  border-radius: 18px;
+  /* box-shadow: 0 2px 16px rgba(0,0,0,0.10); */
+  /* padding: 36px 24px 28px 24px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.4s cubic-bezier(.23,1.12,.32,1), transform 0.4s cubic-bezier(.23,1.12,.32,1), background 0.4s;
+  cursor: pointer;
+  min-height: 260px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.why-feature-icon-wrap {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #181828;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  font-size: 2rem;
+  color: #9a5cf5;
+  box-shadow: 0 2px 8px rgba(154,92,245,0.10);
+}
+/* .grid-hover-effect::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 1;
+} */
+/* .grid-hover-effect:hover::before {
+  opacity: 1;
+} */
+.why-feature-title {
+  font-size: 1.18rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.why-feature-desc {
+  font-size: 1.05rem;
+  color: #bdbdbd;
+  text-align: center;
+}
+
+.main-heading {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: #E6E0FF;
+  /* background: linear-gradient(90deg, #e0e0e0, #a0a0e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; */
+  text-align: center;
+  word-break: break-word;
+}
+.hero-tag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color, #35345a);
+  background-color: rgba(12, 11, 26, 0.5);
+  border-radius: 20px;
+  color: #fff;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  word-break: break-word;
+}
+@media (max-width: 900px) {
+  .main-heading {
+    font-size: 2.2rem;
+    padding: 0 0.5rem;
+  }
+  .hero-tag {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+@media (max-width: 600px) {
+  .main-heading {
+    font-size: 1.3rem;
+    padding: 0 0.2rem;
+  }
+  .hero-tag {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .why-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+@media (max-width: 700px) {
+  .why-features-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .features-title {
+    font-size: 1.5rem;
+  }
+}
+.highlight-text-home {
+  background: linear-gradient(90deg, rgba(138, 43, 226, 0.8), rgba(199, 21, 133, 0.8));
+  padding: 8px 18px;
+  border-radius: 50px;
+  display: inline-block;
+  color: #fff !important;
+}
+.highlight-text1 {
+  background: linear-gradient(90deg, rgba(138, 43, 226, 0.8), rgba(199, 21, 133, 0.8));
+  padding: 11px 20px;
+  border-radius: 50px;
+  display: inline-block;
+  color: #fff !important;
+}

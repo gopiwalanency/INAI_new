@@ -1,0 +1,34 @@
+.partners-section {
+  padding: 4rem 0;
+}
+
+.partners-grid {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.partner-logo img {
+  height: 55px;
+  width: auto;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.partner-logo img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .partners-grid {
+    gap: 2.5rem;
+  }
+  .partner-logo img {
+    height: 45px;
+  }
+} 

@@ -1,0 +1,102 @@
+.company-vmv-section {
+  width: 100vw;
+  background: linear-gradient(120deg, #23243a 0%, #181926 100%);
+  padding: 64px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.company-vmv-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.company-vmv-block {
+  display: flex;
+  align-items: center;
+  background: rgba(40, 42, 60, 0.92);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.13);
+  padding: 2.5rem 2rem;
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 1100px;
+}
+.company-vmv-block.reverse {
+  flex-direction: row-reverse;
+}
+
+.company-vmv-img-wrap {
+  flex: 0 0 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.company-vmv-img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px 0 rgba(123,140,255,0.13);
+  background: #fff;
+  padding: 1.2rem;
+}
+
+.company-vmv-content {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.company-vmv-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #bfcaff;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.01em;
+  background: linear-gradient(90deg, #7b8cff 30%, #a7ffeb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  line-height: 1.15;
+}
+.company-vmv-desc {
+  color: #cfd8ff;
+  font-size: 1.13rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+.company-vmv-desc strong {
+  color: #a7ffeb;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .company-vmv-block, .company-vmv-block.reverse {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 0.7rem;
+  }
+  .company-vmv-img-wrap {
+    flex: none;
+  }
+  .company-vmv-img {
+    width: 120px;
+    height: 120px;
+    padding: 0.5rem;
+  }
+  .company-vmv-title {
+    font-size: 1.25rem;
+  }
+  .company-vmv-desc {
+    font-size: 0.98rem;
+  }
+} 

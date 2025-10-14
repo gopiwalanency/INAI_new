@@ -1,0 +1,389 @@
+.why-section {
+  background: #0a0c18;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem 4rem 1rem; /* minimal top padding */
+}
+
+.why-container {
+  width: 95%;
+  max-width: 1200px; /* match who-container */
+  margin: 0 auto;
+  text-align: center;
+}
+
+.why-label {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid #35345a;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.why-heading {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 0 0 1.1rem 0; /* align with main-heading spacing */
+}
+
+.why-grid {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+  display: grid;
+  grid-template-columns: 1fr; /* single column */
+  gap: 18px 24px;
+}
+
+/* Always single column, no media query needed */
+
+.why-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  text-align: left;
+  gap: 12px;
+  align-items: start;
+  width: 100%;
+}
+
+.why-bullet {
+  color: #60a5fa;
+  line-height: 1.2;
+  transform: translateY(3px);
+}
+
+.why-title {
+  font-size: 1.15rem; /* close to who-card-title */
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: rgba(156, 174, 174, 0.747);
+}
+
+.why-desc {
+  color: rgba(255, 255, 255, 0.736);
+  line-height: 1.7; /* match who-card-desc */
+  font-size: 0.98rem; /* match md desc scale */
+}
+
+/* Board container like referenced design */
+.why-board {
+  margin: 14px auto 0 auto;
+  background: linear-gradient(180deg, rgba(20,24,40,0.9), rgba(12,14,28,0.95));
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 24px 20px 24px 20px; /* equal top/bottom padding */
+  box-shadow: 0 12px 28px rgba(0,0,0,0.38);
+}
+
+.why-board-title {
+  text-align: center;
+  font-size: 2.55rem;
+  font-weight: 900;
+  margin: 0 0 24px 0; /* equal spacing below the title to match top padding */
+  position: relative;
+  color: #ffffff;
+  padding: 0; /* horizontal padding is already provided by .why-board */
+}
+
+/* Highlight pill for INAI Worlds? */
+.highlight-text-home {
+  background: linear-gradient(90deg, rgba(138, 43, 226, 0.8), rgba(199, 21, 133, 0.8));
+  padding: 10px 40px;
+  border-radius: 50px;
+  display: inline-block;
+  color: #fff !important;
+  font-size: 1rem; /* normal text size */
+  line-height: 1.1;
+}
+
+.why-board-title::before { content: none; }
+
+/* Tile style with left accent bar and subtle purple/indigo gradient */
+.why-tile {
+  position: relative;
+  border-radius: 12px;
+  padding: 16px 16px 16px 14px;
+  background: linear-gradient(90deg, rgba(44,56,92,0.9), rgba(81,45,109,0.88));
+  box-shadow: 0 6px 16px rgba(0,0,0,0.28);
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+
+.why-tile-left {
+  width: 10px;
+  height: 100%;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #38bdf8, #8b5cf6);
+}
+
+.why-tile-text { padding-left: 8px; }
+.why-tile:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(90deg, rgba(54,68,112,0.95), rgba(98,58,132,0.92));
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+}
+
+/* ============================ */
+/* Swipeable carousel (new UI)  */
+/* ============================ */
+
+.why-swipe {
+  position: relative;
+  margin-top: 10px;
+}
+
+.why-track {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 6px 4px 14px;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%);
+  perspective: 900px;
+}
+
+.why-track::-webkit-scrollbar { height: 8px; }
+.why-track::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.14);
+  border-radius: 999px;
+}
+
+.why-card {
+  position: relative;
+  scroll-snap-align: center;
+  min-width: clamp(350px, 80vw, 420px);
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 28px;
+  padding: 24px 24px 26px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+  transition: transform .28s ease, box-shadow .35s ease, background .35s ease;
+  isolation: isolate;
+  transform-style: preserve-3d;
+  transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  will-change: transform;
+}
+
+.why-card.active {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 48px rgba(139, 92, 246, 0.35);
+  background: transparent;
+  animation: breathe 3s ease-in-out infinite;
+}
+
+.why-card:hover { 
+  /* hover effect removed */
+}
+
+.why-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 28px;
+  background:
+    conic-gradient(from var(--ang, 0deg), #22d3ee, #8b5cf6, #22d3ee);
+  mask:
+    linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  padding: 1px;
+  opacity: 0.55;
+  z-index: -2;
+  animation: spinGradient 6s linear infinite;
+}
+
+.why-card-glow {
+  position: absolute;
+  inset: -1px;
+  border-radius: 28px;
+  background: radial-gradient(1200px 120px at var(--mx, 50%) var(--my, 40%), rgba(139,92,246,0.28), transparent 60%);
+  pointer-events: none;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.why-card:hover .why-card-glow { opacity: 0.9; }
+
+.why-card-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.why-card-icon svg {
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(0 4px 12px currentColor);
+}
+
+.why-card:hover .why-card-icon {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.why-card-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.why-card-badge {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #fff;
+  background: transparent;
+  border: 2px solid #8b5cf6;
+  box-shadow: none;
+}
+
+.why-card-title {
+  font-size: 1.20rem;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+}
+
+.why-card-desc {
+  color: rgba(255,255,255,0.86);
+  line-height: 1.7;
+  font-size: 0.98rem;
+}
+
+.why-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background 150ms ease, transform 150ms ease;
+  z-index: 2;
+}
+
+.why-nav:hover {
+  background: rgba(255,255,255,0.12);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.why-nav-left { left: -6px; }
+.why-nav-right { right: -6px; }
+
+@media (min-width: 900px) {
+  .why-nav-left { left: -8px; }
+  .why-nav-right { right: -8px; }
+}
+
+.why-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.why-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.25);
+  border: none;
+  cursor: pointer;
+}
+
+.why-dot.active {
+  background: linear-gradient(90deg, #22d3ee, #8b5cf6);
+}
+
+/* Animated soft backdrop behind swipe area */
+.why-swipe::before {
+  content: "";
+  position: absolute;
+  inset: -12% -6% -18% -6%;
+  background:
+    radial-gradient(600px 120px at 10% 30%, rgba(34,211,238,0.10), transparent 55%),
+    radial-gradient(600px 120px at 90% 70%, rgba(139,92,246,0.10), transparent 55%);
+  filter: blur(8px);
+  z-index: -3;
+  animation: floatBg 12s ease-in-out infinite alternate;
+}
+
+/* ============================ */
+/* Continuous marquee (Upcoming Projects style) */
+/* ============================ */
+
+.why-marquee {
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.why-marquee-track {
+  display: flex;
+  gap: 16px;
+  will-change: transform;
+  animation: whyMarquee 6s linear infinite;
+  animation-play-state: var(--why-marquee-state, running);
+}
+
+.why-marquee-track.paused {
+  animation-play-state: paused;
+}
+
+@keyframes whyMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes spinGradient {
+  to { --ang: 360deg; }
+}
+
+@keyframes floatBg {
+  0%   { transform: translateY(0px); opacity: 0.8; }
+  50%  { transform: translateY(-6px); opacity: 1; }
+  100% { transform: translateY(0px); opacity: 0.85; }
+}
+
+@keyframes breathe {
+  0% { box-shadow: 0 18px 48px rgba(139, 92, 246, 0.28); }
+  50% { box-shadow: 0 22px 58px rgba(139, 92, 246, 0.42); }
+  100% { box-shadow: 0 18px 48px rgba(139, 92, 246, 0.28); }
+}
+
+/* Reduce motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .why-card,
+  .why-card.active,
+  .why-card:hover { transition: none; transform: none; }
+}
+@media (max-width: 900px) {
+  .main-heading {
+      font-size: 1.5rem;
+      padding: 0 0.5rem;
+      text-align: center;
+  }
+}

@@ -1,0 +1,251 @@
+/* Global smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Blog layout container */
+.blog-layout {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  gap: 24px;
+}
+
+/* Sidebar styles */
+.blog-sidebar {
+  flex: 0 0 240px;
+  background: #1e1f33;
+  padding: 24px 16px;
+  border-radius: 16px;
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.sidebar-title {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 6px;
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-list li {
+  margin-bottom: 10px;
+}
+
+.sidebar-list a {
+  color: #f6f6f6;
+  text-decoration: none;
+  font-size: 1.02rem;
+  transition: color 0.2s ease;
+}
+
+.sidebar-list a:hover {
+  color: #60a5fa;
+}
+
+/* Main blog content container */
+.blog-detail-page {
+  flex: 1;
+  background: #0A0C18;
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  padding-bottom: 32px;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+/* Header */
+.blog-detail-header {
+  text-align: center;
+  background: linear-gradient(135deg, #1E1F33 30%, #1E1F33 100%);
+  border-radius: 18px 18px 0 0;
+}
+
+/* Title */
+.blog-detail-title {
+  padding: 24px;
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin: 0 auto;
+  background: linear-gradient(90deg, #e0e0e0, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.5px;
+}
+
+/* Image section */
+.blog-detail-image {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 18px 18px 0 0;
+}
+
+.blog-detail-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 18px 18px 0 0;
+  max-height: 480px;
+}
+
+/* Content */
+.blog-detail-content {
+  padding: 32px;
+  color: #f9f9f9;
+}
+
+.blog-detail-content h2,
+.blog-detail-content h3 {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.blog-detail-content h2 {
+  font-size: 1.8rem;
+  margin-top: 36px;
+}
+
+.blog-detail-content h3 {
+  font-size: 1.25rem;
+  margin-top: 24px;
+}
+
+.blog-detail-content p,
+.blog-detail-content li {
+  font-size: 1.08rem;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.blog-detail-content ol,
+.blog-detail-content ul {
+  margin-left: 24px;
+  margin-bottom: 20px;
+}
+
+/* Back button */
+.blog-back-btn {
+  display: inline-block;
+  padding: 12px 32px;
+  background: linear-gradient(90deg, #6366f1, #0ea5e9);
+  color: white;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+.blog-back-btn:hover {
+  background: linear-gradient(90deg, #0ea5e9, #6366f1);
+  transform: scale(1.03);
+}
+
+/* FAQ Section */
+.faq-block {
+  background: rgba(35, 36, 58, 0.95);
+  border-radius: 16px;
+  padding: 32px;
+  margin-top: 48px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 16px 0;
+  transition: all 0.3s ease;
+}
+
+.faq-question-wrapper {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.faq-question-wrapper:hover .faq-question-text {
+  color: #64b5f6;
+}
+
+.faq-question-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.faq-icon {
+  font-size: 1.3rem;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  margin-top: 10px;
+  color: #e0e0e0;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .blog-layout {
+    flex-direction: column;
+    padding: 24px 12px;
+  }
+
+  .blog-sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+    position: static;
+    top: auto;
+  }
+
+  .blog-detail-page {
+    padding: 0;
+    border-radius: 16px;
+  }
+
+  .blog-detail-title {
+    font-size: 1.8rem;
+    padding: 18px;
+  }
+
+  .blog-detail-content {
+    padding: 20px 16px;
+  }
+
+  .faq-block {
+    padding: 20px;
+  }
+
+  .blog-detail-image img {
+    max-height: 300px;
+    border-radius: 16px 16px 0 0;
+  }
+}

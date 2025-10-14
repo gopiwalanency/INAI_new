@@ -1,0 +1,174 @@
+.leadership-section {
+    padding: 80px 40px;
+    background-color: #fff;
+    color: #333;
+}
+
+.leaders {
+    max-width: 1200px;
+    margin: 0 auto 80px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.leader-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.leader-card.right {
+    direction: rtl; /* Flips the order of columns */
+}
+.leader-card.right > * {
+    direction: ltr; /* Resets text direction for children */
+}
+
+
+.leader-image {
+    position: relative;
+    max-width: 450px;
+    justify-self: center;
+}
+
+.leader-image img {
+    width: 100%;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.leader-shape {
+    position: absolute;
+    z-index: 1;
+    background-color: #a7d7f9;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.leader-card.left .leader-shape {
+    top: -20px;
+    left: -20px;
+    transform: rotate(-5deg);
+}
+
+.leader-card.right .leader-shape {
+    top: 20px;
+    right: -20px;
+    transform: rotate(5deg);
+}
+
+.leader-info {
+    max-width: 450px;
+}
+
+.leader-title {
+    font-family: 'Brush Script MT', 'Brush Script Std', cursive;
+    font-size: 48px;
+    color: #007BFF;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.wavy-line {
+    width: 60px;
+    height: 10px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="10"><path d="M0,5 Q15,0 30,5 T60,5" stroke="%23a7d7f9" fill="transparent" stroke-width="3"/></svg>');
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
+
+.leader-message {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.leader-name {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.leader-role {
+    font-size: 16px;
+    color: #007BFF;
+}
+
+.other-team-members {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.other-members-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    background: linear-gradient(90deg, #333, #007BFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Reusing team grid styles from Team.css but overriding for light theme */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.team-member-card {
+    text-align: center;
+}
+
+.team-member-image-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px auto;
+    border: 3px solid #eee;
+    background-color: #f8f8f8;
+}
+
+.team-member-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.team-member-role {
+    font-size: 14px;
+    color: #666;
+}
+
+@media (max-width: 992px) {
+    .leader-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .leader-card.right {
+        direction: ltr;
+    }
+    .leader-image {
+        margin-bottom: 40px;
+    }
+    .leader-info {
+        margin: 0 auto;
+    }
+    .wavy-line {
+        margin: 0 auto 20px auto;
+    }
+}

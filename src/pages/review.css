@@ -1,0 +1,105 @@
+.homepage-reviews-section {
+  /* background: #232a4a; */
+  border-radius: 1.5rem;
+  padding: 1.5rem 2rem 3rem 2rem;
+  /* margin: 3rem 0; */
+  color: #fff;
+}
+
+.homepage-reviews-header {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.homepage-reviews-subtitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #b2b8d8;
+  letter-spacing: 0.12em;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+}
+
+.homepage-reviews-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 0;
+  color: #bfcaff;
+}
+
+.homepage-reviews-cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.homepage-review-card {
+  background: none;
+  border-radius: 1.2rem;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  min-width: 260px;
+  max-width: 340px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #fff;
+  box-shadow: none;
+}
+
+.homepage-review-stars {
+  color: #ffd700;
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.1em;
+}
+
+.homepage-review-text {
+  font-size: 1.13rem;
+  color: #e0e0e0;
+  margin-bottom: 2.2rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.homepage-review-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.homepage-review-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+.homepage-review-name {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.homepage-review-role {
+  font-size: 0.98rem;
+  color: #b2b8d8;
+}
+
+@media (max-width: 900px) {
+  .homepage-reviews-cards {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+  }
+  .homepage-review-card {
+    min-width: 0;
+    max-width: 98vw;
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+  }
+  .homepage-reviews-title {
+    font-size: 1.7rem;
+  }
+}

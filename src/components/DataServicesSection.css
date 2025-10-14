@@ -1,0 +1,109 @@
+.data-services-section {
+    padding: 6rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.data-services-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.data-services-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.data-services-tag {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.data-services-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #E0DFF6;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(90deg, #e0e0e0, #a0a0e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.data-services-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    opacity: 0.8;
+    margin-bottom: 2rem;
+}
+
+.btn.btn-primary-data {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    box-shadow: 0 4px 20px rgba(190, 75, 255, 0.4);
+    padding: 0.8rem 2rem;
+}
+
+/* Right Column */
+.data-services-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.service-card {
+    background-color: #1A1A3D;
+    padding: 2rem;
+    border-radius: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    border: 1px solid var(--border-color);
+}
+
+.service-card-icon {
+    font-size: 2.2rem;
+    color: #C7528A;
+    /* Pink icon color from design */
+}
+
+.service-card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.service-card-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    p {
+        padding-right: 3rem;
+    }
+
+    .data-services-container {
+        grid-template-columns: 1fr;
+    }
+
+    .data-services-left {
+        align-items: center;
+        text-align: center;
+    }
+}

@@ -1,0 +1,93 @@
+.cta3-section {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 0 64px 0;
+    background: url('../assets/Untitled.jpg') center center/cover no-repeat;
+    position: relative;
+  }
+  .cta3-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(24, 24, 40, 0.82);
+    z-index: 1;
+  }
+  .cta3-content {
+    border-radius: 2rem;
+    padding: 8rem 2.2rem 8rem 2.2rem;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .cta3-title {
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: #bfcaff;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.01em;
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.15;
+  }
+  
+  .cta3-subtitle {
+    font-size: 1.18rem;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .cta3-desc {
+    color: #ffffff;
+    font-size: 1.08rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  .cta3-button {
+    background: linear-gradient(90deg, #7b8cff 30%, #a7ffeb 100%);
+    color: #181926;
+    font-weight: 700;
+    font-size: 1.13rem;
+    padding: 0.95rem 2.5rem;
+    border: none;
+    border-radius: 1.7rem;
+    cursor: pointer;
+    box-shadow: 0 2px 12px 0 rgba(123,140,255,0.13);
+    transition: background 0.22s, color 0.22s, transform 0.18s, box-shadow 0.22s;
+    outline: none;
+    margin-top: 0.2rem;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta3-button:hover {
+    background: linear-gradient(90deg, #a7ffeb 0%, #7b8cff 100%);
+    color: #23243a;
+    transform: translateY(-2px) scale(1.045);
+    box-shadow: 0 8px 32px 0 rgba(80, 120, 255, 0.18), 0 2px 8px 0 rgba(0,0,0,0.10);
+  }
+  
+  @media (max-width: 700px) {
+    .cta3-content {
+      padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+      max-width: 98vw;
+    }
+    .cta3-title {
+      font-size: 1.3rem;
+    }
+    .cta3-desc {
+      font-size: 0.98rem;
+    }
+  } 
+  

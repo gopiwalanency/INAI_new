@@ -1,0 +1,226 @@
+.team-page {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+}
+
+.team-grid-container {
+  padding: 80px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+
+.team-member-card {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 1 / 1.2;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  background-color: var(--bg-surface);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.team-member-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(var(--primary-color-rgb), 0.3);
+}
+
+.team-member-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.team-member-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
+  filter: grayscale(100%);
+}
+
+.team-member-card:hover .team-member-image {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+
+.team-member-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px;
+  background: linear-gradient(to top, rgba(12, 11, 26, 0.9) 20%, transparent);
+  color: white;
+  transform: translateY(30%);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.team-member-card:hover .team-member-info {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.team-member-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.team-member-role {
+  font-size: 1rem;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .team-grid-container {
+    padding: 60px 20px;
+  }
+  .founder-card {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+  .founder-info {
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .founders-section {
+    padding: 60px 20px;
+  }
+  .founder-image-container {
+    width: 300px;
+    height: 350px;
+  }
+  .founder-name {
+    font-size: 1.8rem;
+  }
+  .founder-role {
+    font-size: 1.1rem;
+  }
+  .founder-description {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.founders-section {
+  padding: 80px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.founder-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 80px;
+  gap: 50px;
+}
+
+.founder-card.right {
+  flex-direction: row-reverse;
+}
+
+.founder-image-container {
+  flex-shrink: 0;
+  position: relative;
+  width: 350px;
+  height: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.founder-card:hover .founder-image-container {
+  transform: scale(1.05);
+  box-shadow: 0 30px 60px -15px rgba(0,0,0,0.35);
+}
+
+.founder-image-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  transition: left 0.7s ease-in-out;
+}
+
+.founder-card:hover .founder-image-container::before {
+  left: 150%;
+}
+
+.founder-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.founder-info {
+  text-align: left;
+  flex: 1;
+}
+
+.founder-card.right .founder-info {
+  text-align: left;
+}
+
+.founder-name {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.founder-role {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.founder-description {
+  margin-top: 20px;
+  color: var(--text-color);
+  line-height: 1.7;
+  font-size: 1rem;
+  opacity: 0.9;
+} 

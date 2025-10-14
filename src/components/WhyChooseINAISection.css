@@ -1,0 +1,69 @@
+.why-choose-section {
+    background: #1b0d31;
+    color: #000000;
+    padding: 4rem 1.5rem;
+    /* font-size: ; */
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    color: #ffffff;
+  }
+  
+  .points-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .point-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: linear-gradient(90deg, #e0e0e0, #a0a0e0);
+    padding: 1.10rem 1.10rem;
+    border-radius: 1rem;
+    /* transition: background 0.3s; */
+    transition: transform 0.25s cubic-bezier(.4,2,.6,1), box-shadow 0.25s;
+    font-weight: 500;
+  }
+  
+  .point-item:hover {
+    transform: translateY(-12px) scale(1.04);
+    box-shadow: 0 16px 40px 0 rgba(80, 120, 255, 0.18), 0 2px 8px 0 rgba(0,0,0,0.10);
+  }
+  
+  .check-icon {
+    color: #7c3aed; /* Purple-600 */
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .point-item p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .point-item p {
+      font-size: 1rem;
+    }
+  }
+  
