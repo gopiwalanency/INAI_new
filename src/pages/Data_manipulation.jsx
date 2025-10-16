@@ -456,6 +456,11 @@ const Service2 = () => {
           </div>
         </div>
 
+      <div className="after-cards-note">
+        <p>Before this step, every project begins with Reliable <a href="/data-collection" className="line-link"> Data Collection for AI & ML </a>, where
+        we gather high-quality raw information. Once collected, structuring prepares it for seamless integration into AI models.</p>
+      </div>
+
         {/* Why Data Structuring Matters Section */}
         <div className="scrolling-section">
           <h2 className="gradient-heading">Why Data Structuring Matters</h2>

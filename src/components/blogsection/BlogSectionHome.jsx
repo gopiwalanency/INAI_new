@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import blogImg1 from '../../assets/blog1.jpg';
-import blogImg2 from '../../assets/blog2.jpg';
-import blogImg3 from '../../assets/blog3.jpg';
+import blogImg1 from '../../assets/blog1.webp';
+import blogImg2 from '../../assets/blog2.webp';
+import blogImg3 from '../../assets/blog3.webp';
 
 import './BlogSection.css';
 

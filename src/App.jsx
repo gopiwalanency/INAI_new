@@ -104,20 +104,23 @@ function App() {
               </PageWrapper>
             } />
             {/* Redirect old URL to new URL */}
-            <Route path="/services/web-scraping" element={<Navigate to="/services/data-collection" replace />} />
-            <Route path="/services/data-manipulation" element={<Navigate to="/services/data-structuring" replace />} />
+            <Route path="/services/web-scraping" element={<Navigate to="/data-collection" replace />} />
+            <Route path="/services/data-manipulation" element={<Navigate to="/data-structuring" replace />} />
+            <Route path="/services/data-collection" element={<Navigate to="/data-collection" replace />} />
+            <Route path="/services/data-structuring" element={<Navigate to="/data-structuring" replace />} />
+            <Route path="/services/model-training" element={<Navigate to="/model-training" replace />} />
             
-            <Route path="/services/data-collection" element={
+            <Route path="/data-collection" element={
               <PageWrapper pageKey="dataCollection">
                 <DataCollection />
               </PageWrapper>
             } />
-            <Route path="/services/data-structuring" element={
+            <Route path="/data-structuring" element={
               <PageWrapper pageKey="dataManipulation">
                 <Data_manipulation />
               </PageWrapper>
             } />
-            <Route path="/services/model-training" element={
+            <Route path="/model-training" element={
               <PageWrapper pageKey="modelTraining">
                 <Model_training />
               </PageWrapper>

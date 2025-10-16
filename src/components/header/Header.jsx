@@ -66,9 +66,9 @@ const Header = () => {
 
   // Dropdown data
   const serviceLinks = [
-    { to: '/services/data-collection', label: 'Data Collection' },
-    { to: '/services/data-structuring', label: 'Data Structuring' },
-    { to: '/services/model-training', label: 'Model Training' },
+    { to: '/data-collection', label: 'Data Collection' },
+    { to: '/data-structuring', label: 'Data Structuring' },
+    { to: '/model-training', label: 'Model Training' },
   ];
   const portfolioLinks = [
     // { to: '/portfolio/inai-life', label: 'INAI_VERSE' },
@@ -98,6 +98,15 @@ const Header = () => {
             <ul className="nav-list">
               <li><NavLink to="/" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} onClick={toggleMenu}>Home</NavLink></li>
               <li><NavLink to="/about" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} onClick={toggleMenu}>About</NavLink></li>
+              <Dropdown
+                label="Process"
+                to="/services"
+                links={serviceLinks}
+                isOpen={openDropdown === 'service'}
+                onToggle={setOpenDropdown}
+                dropdownKey="service"
+                closeMenu={() => setIsMenuOpen(false)}
+              />
               {/* <Dropdown label="Service" to="/services" links={serviceLinks} isOpen={openDropdown === 'service'} onToggle={setOpenDropdown} dropdownKey="service" />
                */}
 

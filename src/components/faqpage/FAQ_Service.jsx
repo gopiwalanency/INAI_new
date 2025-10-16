@@ -10,7 +10,7 @@ const faqData = [
     },
     {
         question: '2. Why is machine learning data collection important?',
-        answer: 'It forms the foundation for all AI projects, reducing errors, improving algorithm performance, and enabling models to handle real-world scenarios accurately..',
+        answer: 'It forms the foundation for all AI products, reducing errors, improving algorithm performance, and enabling models to handle real-world scenarios accurately..',
     },
     {
         question: '3. Which tools and datasets are used in machine learning data collection?',

@@ -52,11 +52,11 @@ const Footer = () => {
 
             {/* Column 3: Our Services */}
             <div className="footer-column">
-              <h3 className="footer-heading">Our Services</h3>
+              <h3 className="footer-heading">Our Process</h3>
               <ul className="footer-links-list">
-                <li><Link to="/services/data-collection">Data Collection</Link></li>
-                <li><Link to="/services/data-structuring">Data Structuring</Link></li>
-                <li><Link to="/services/model-training">Model Training</Link></li>
+                <li><Link to="/data-collection">Data Collection</Link></li>
+                <li><Link to="/data-structuring">Data Structuring</Link></li>
+                <li><Link to="/model-training">Model Training</Link></li>
               </ul>
             </div>
 

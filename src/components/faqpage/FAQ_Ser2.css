@@ -106,6 +106,17 @@
 
 }
 
+/* Link highlight used inside FAQ answers */
+.line-link {
+    color: skyblue;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.line-link:hover {
+    text-decoration: none;
+}
+
 .faq-bg-image {
     position: absolute;
     top: 8%;

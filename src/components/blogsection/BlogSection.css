@@ -24,13 +24,38 @@
   gap: 1.5rem;
 }
 
+
 .blog-heading {
   font-size: 2.8rem;
   font-weight: 700;
   color: #bfcaff;
   margin: 0;
   letter-spacing: 0.01em;
-  text-align: left;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Emphasized text inside the heading (scoped to blog section) */
+.blog-section .highlight-text {
+  background: linear-gradient(90deg, #8a2be2cc, #c71585cc);
+  color: #fff !important;
+  padding: 11px 20px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  /* Reset any global text clipping from other .highlight-text rules */
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  -webkit-text-fill-color: initial;
+}
+
+/* Keep the heading on one line on larger screens */
+@media (min-width: 768px) {
+  .blog-heading {
+    white-space: nowrap;
+  }
 }
 
 .view-all-btn {

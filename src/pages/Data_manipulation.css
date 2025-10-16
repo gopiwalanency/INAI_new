@@ -783,6 +783,41 @@
   }
 }
 
+/* After-cards note */
+.after-cards-note {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.after-cards-note p {
+  color: #e2e8f0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 980px;
+}
+
+.after-cards-note .line-link {
+  color: skyblue;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.after-cards-note .line-link:hover {
+  text-decoration: underline;
+}
+
+/* Shared inline link highlight usable across pages */
+.line-link {
+  color: skyblue;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.line-link:hover {
+  text-decoration: none;
+}
+
 /* FAQ */
 .faq-grid {
   max-width: 900px;

@@ -415,7 +415,7 @@ const Service3 = () => {
             </div>
           </div>
           <p style={{ textAlign: 'center', color: '#e2e8f0', marginTop: '2rem', fontSize: '1.05rem' }}>
-            All training begins with Reliable Data Collection for AI & ML, where diverse and accurate raw datasets are gathered before structuring Data and model training.
+            All training begins with Reliable <a href="/data-collection" className="line-link">Data Collection for AI & ML</a>, where diverse and accurate raw datasets are gathered before <a href="/data-structuring" className="line-link">structuring Data</a> and model training.
           </p>
         </div>
 

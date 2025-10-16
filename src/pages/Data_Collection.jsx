@@ -534,7 +534,7 @@ const WebScraping = () => {
                 </div>
               );
             })}
-            <p>Once the data is collected, the next crucial step is Data Structuring for AI & ML, where raw information is organized into machine-readable formats to ensure seamless model training.</p>
+            <p>Once the data is collected, the next crucial step is <a href="/data-structuring" style={{ color: "skyblue"}} > Data Structuring for AI & ML </a>, where raw information is organized into machine-readable formats to ensure seamless model training.</p>
           </div>
         </div>
         {/* Intern Cards Section */}

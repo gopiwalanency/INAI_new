@@ -4,17 +4,17 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(10, 12, 24, 0.98) !important;
+  background: transparent !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: none;
   transform: translateY(0);
 }
 
 .header.scrolled {
-  box-shadow: 0 8px 30px rgba(51, 3, 74, 0.817);
-  background: rgba(10, 12, 24, 0.98) !important;
+  box-shadow: none;
+  background: transparent !important;
   height: 80px;
 }
 

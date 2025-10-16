@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import blogImg1 from '../../assets/blog1.jpg';
-import blogImg2 from '../../assets/blog2.jpg';
-import blogImg3 from '../../assets/blog3.jpg';
-import blogImg4 from '../../assets/blog4.jpg';
-import blogImg5 from '../../assets/blog5.jpg';
-import blogImg6 from '../../assets/blog6.jpg';
-import blogImg7 from '../../assets/blog7.jpg';
-import blogImg8 from '../../assets/blog8.jpg';
-import blogImg9 from '../../assets/blog9.jpg';
-import blogImg10 from '../../assets/blog10.jpg';
-import blogImg11 from '../../assets/blog11.jpg';
-import blogImg12 from '../../assets/blog12.jpg';
+import blogImg1 from '../../assets/blog1.webp';
+import blogImg2 from '../../assets/blog2.webp';
+import blogImg3 from '../../assets/blog3.webp';
+import blogImg4 from '../../assets/blog4.webp';
+import blogImg5 from '../../assets/blog5.webp';
+import blogImg6 from '../../assets/blog6.webp';
+import blogImg7 from '../../assets/blog7.webp';
+import blogImg8 from '../../assets/blog8.webp';
+import blogImg9 from '../../assets/blog9.webp';
+import blogImg10 from '../../assets/blog10.webp';
+import blogImg11 from '../../assets/blog11.webp';
+import blogImg12 from '../../assets/blog12.webp';
 
 import './BlogSection.css';
 
@@ -99,8 +99,8 @@ const blogs = [
 const BlogSection = () => (
   <section className="blog-section">
     <div className="blog-container">
-      <div className="blog-header-wrapper">
-        <h2 className="blog-heading">Latest from Our <span className="highlight-text">AI Blogs</span></h2>
+    <div className="blog-header-wrapper">
+        <h2 className="blog-heading">Latest from our <span className="highlight-text">AI Blogs</span></h2>
 
       </div>
       <div className="blog-grid">

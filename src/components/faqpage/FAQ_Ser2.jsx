@@ -10,7 +10,11 @@ const faqData = [
     },
     {
         question: '2. Why is data structuring important in AI model development?',
-        answer: 'Structured data ensures efficient model training, higher accuracy, and reduced bias in AI and ML models.',
+        answer: (
+            <>
+                Structured data ensures efficient <a href="/model-training" className="line-link">model training</a>, higher accuracy, and reduced bias in AI and ML models.
+            </>
+        ),
     },
     {
         question: '3. How do you prepare clean datasets for AI-powered products?',

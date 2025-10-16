@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Blog.css';
-import image1 from '@/assets/blog12.jpg';
+import image1 from '@/assets/blog12.webp';
 import { Helmet } from 'react-helmet-async';
 import SEO from '@/components/SEO';
 
