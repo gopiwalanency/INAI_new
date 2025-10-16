@@ -340,6 +340,10 @@ const Service2 = () => {
                 src={serviceImg}
                 alt="Web Scraping"
                 className="w-full h-auto max-h-[400px] md:max-h-[500px] object-contain rounded-2xl shadow-md web_img"
+                loading="eager"
+                decoding="sync"
+                fetchpriority="high"
+                data-priority="high"
               />
             </div>
           </div>

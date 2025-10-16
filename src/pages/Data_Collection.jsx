@@ -423,6 +423,10 @@ const WebScraping = () => {
                   src={webscraping}
                   alt="Web Scraping for AI/ML Data Collection"
                   className="w-full h-auto max-h-[900px] md:max-h-[1000px] object-contain rounded-2xl shadow-md web_img"
+                  loading="eager"
+                  decoding="sync"
+                  fetchpriority="high"
+                  data-priority="high"
                 />
               </div>
             </div>

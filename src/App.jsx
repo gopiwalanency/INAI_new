@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { useEffect } from 'react';
 import ScrollToTop from './components/ScrollToTop';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import Header from './components/header/Header';
@@ -44,6 +45,7 @@ import InaiVerse from './components/products/inai_verse';
 import Career from './components/careerpage/Career';
 // Import meta configuration
 import { metaConfig } from './config/metaConfig';
+import { useOptimizeImages } from './hooks/useOptimizeImages.js';
 
 // Wrapper component that includes SEO for each page
 const PageWrapper = ({ children, pageKey }) => {
@@ -61,6 +63,7 @@ const PageWrapper = ({ children, pageKey }) => {
 };
 
 function App() {
+  useOptimizeImages();
   return (
     <Router>
       <ScrollToTop />
